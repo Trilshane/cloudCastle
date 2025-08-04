@@ -1,0 +1,63 @@
+.container {
+  margin-top: 9.063rem;
+  @media screen and (max-width: 1024px) {
+    margin-top: 6.25rem;
+  }
+  @media screen and (max-width: 576px) {
+    margin-top: 5.313rem;
+  }
+  .faqContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-top: 2.813rem;
+    .accordionItem {
+      background-color: #282828;
+      color: #fff;
+      box-shadow: none;
+      position: inherit;
+      border-bottom: 0.063rem solid #a6abb3;
+      padding: 0;
+      margin: 0;
+      .btn {
+        span {
+          margin: 0;
+          margin-bottom: 0.875rem;
+        }
+        .buttonContainer {
+          width: 1.5rem;
+          height: 1.5rem;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+      .question {
+        font-size: 1.5rem;
+        padding: 0;
+        margin: 0;
+        @media screen and (max-width: 1024px) {
+          font-size: 1.25rem;
+        }
+        @media screen and (max-width: 576px) {
+          width: 16.438rem;
+        }
+      }
+      .answer {
+        font-size: 1.25rem;
+        padding: 0;
+        padding-bottom: 1.938rem;
+        @media screen and (max-width: 1024px) {
+          padding-bottom: 1.125rem;
+          font-size: 1.125rem;
+        }
+        @media screen and (max-width: 576px) {
+          width: 19.938rem;
+          padding-bottom: 1.563rem;
+        }
+      }
+    }
+  }
+}

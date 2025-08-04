@@ -1,0 +1,143 @@
+.container {
+  margin-top: 9.063rem;
+  @media screen and (max-width: 1024px) {
+    margin-top: 6.25rem;
+  }
+  @media screen and (max-width: 576px) {
+    margin-top: 5.313rem;
+  }
+  .bingoCardsContent {
+    display: grid;
+    grid-template-columns: 27.813rem 27.813rem 27.813rem;
+    justify-content: space-between;
+    row-gap: 1.25rem;
+    margin-top: 2.5rem;
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: 21.2rem 21.2rem;
+      row-gap: 1.25rem;
+    }
+    @media screen and (max-width: 576px) {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .bingoCard {
+      width: 100%;
+      height: 15rem;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      @media screen and (max-width: 1024px) {
+        height: 12.5rem;
+      }
+      .firstScreen {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        backface-visibility: hidden;
+        transition: transform 0.6s linear;
+        transform: perspective(37.5rem) rotateX(0deg);
+        border-radius: 1rem;
+
+        .imgContainer {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 2;
+          width: 100%;
+          height: 100%;
+          .backgroundImage {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .cardTitle {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 1.875rem;
+          color: #000;
+          z-index: 3;
+          font-weight: 500;
+          transition: transform 0.6s ease;
+          @media screen and (max-width: 1024px) {
+            font-size: 1.375rem;
+          }
+        }
+        &:hover {
+          .cardTitle {
+            transform: translate(-50%, -50%) scale(1.2);
+          }
+        }
+      }
+      .secondScreen {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        box-sizing: border-box;
+        overflow: hidden;
+        backface-visibility: hidden;
+        transition: transform 0.6s linear;
+        padding: 2.5rem 0.625rem 2.5rem 2rem;
+        transform: perspective(37.5rem) rotateX(180deg);
+        border-radius: 1rem;
+        @media screen and (max-width: 1024px) {
+          padding: 1.5rem;
+        }
+        .content {
+          height: 10.5rem;
+          overflow: hidden;
+          overflow-y: auto;
+          position: relative;
+          @media screen and (max-width: 1024px) {
+            height: 9.5rem;
+          }
+          @media screen and (max-width: 576px) {
+            height: 10rem;
+          }
+          &::-webkit-scrollbar {
+            position: absolute;
+            right: 2rem;
+            width: 0.375rem;
+            background-color: #ececec;
+            border-radius: 1rem;
+          }
+          &::-webkit-scrollbar-thumb {
+            border-radius: 0.375rem;
+            background-color: #a6abb3;
+            border-radius: 1rem;
+          }
+          .textContent {
+            color: #000;
+            font-size: 1.25rem;
+            width: 23.813rem;
+            @media screen and (max-width: 1024px) {
+              font-size: 1.125rem;
+              width: 102%;
+            }
+            @media screen and (max-width: 576px) {
+              width: 100%;
+            }
+          }
+        }
+      }
+      &.active {
+        .firstScreen {
+          transform: perspective(37.5rem) rotateX(-180deg);
+        }
+        .secondScreen {
+          transform: perspective(37.5rem) rotateX(0deg);
+        }
+      }
+    }
+  }
+}

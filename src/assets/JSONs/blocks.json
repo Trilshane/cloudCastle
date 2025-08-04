@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Основные предметы",
+    "id": "1",
+    "img": "/src/assets/images/block_1.png"
+  },
+  {
+    "title": "Факультативы",
+    "id": "2",
+    "img": "/src/assets/images/block_2.png"
+  },
+  {
+    "title": "Вечерняя программа",
+    "id": "3",
+    "img": "/src/assets/images/block_3.png"
+  }
+]

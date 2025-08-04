@@ -1,0 +1,16 @@
+.siteWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-x: clip;
+  .siteContent {
+    flex: 1 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: 1024px) {
+      padding: 0 1rem;
+    }
+  }
+}

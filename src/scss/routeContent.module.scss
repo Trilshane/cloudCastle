@@ -1,0 +1,229 @@
+.container {
+  margin-top: 9.063rem;
+  @media screen and (max-width: 1024px) {
+    margin-top: 6.25rem;
+  }
+  @media screen and (max-width: 576px) {
+    margin-top: 5.313rem;
+  }
+  .description {
+    margin: 0 auto;
+    margin-top: 1.25rem;
+    font-size: 1.875rem;
+    font-weight: 500;
+    width: 66.75rem;
+    text-align: center;
+    @media screen and (max-width: 1024px) {
+      width: 41.375rem;
+      margin-top: 1.25rem;
+      font-size: 1.375rem;
+    }
+    @media screen and (max-width: 576px) {
+      width: 100%;
+    }
+  }
+  .blocksContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+    @media screen and (max-width: 1024px) {
+      margin-top: 1.25rem;
+    }
+    @media screen and (max-width: 576px) {
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .blockElem {
+      position: relative;
+      width: 27.813rem;
+      height: 25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      overflow: hidden;
+      @media screen and (max-width: 1024px) {
+        width: 14.25rem;
+        height: 19.313rem;
+      }
+      @media screen and (max-width: 576px) {
+        width: 100%;
+      }
+      &.notActive {
+        border-radius: 1rem;
+        &:hover {
+          span {
+            position: absolute;
+            display: block;
+            &:nth-child(1) {
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 0.3rem;
+              background: linear-gradient(90deg, transparent, #c2f23c);
+              animation: animate1 1s linear infinite;
+            }
+            @keyframes animate1 {
+              0% {
+                left: -100%;
+              }
+              50%,
+              100% {
+                left: 100%;
+              }
+            }
+            &:nth-child(2) {
+              top: -100%;
+              right: 0%;
+              width: 0.3rem;
+              height: 100%;
+              background: linear-gradient(180deg, transparent, #c2f23c);
+              animation: animate2 1s linear infinite;
+              animation-delay: 0.25s;
+            }
+            @keyframes animate2 {
+              0% {
+                top: -100%;
+              }
+              50%,
+              100% {
+                top: 100%;
+              }
+            }
+            &:nth-child(3) {
+              bottom: 0;
+              right: 100%;
+              width: 100%;
+              height: 0.3rem;
+              background: linear-gradient(270deg, transparent, #c2f23c);
+              animation: animate3 1s linear infinite;
+              animation-delay: 0.5s;
+            }
+            @keyframes animate3 {
+              0% {
+                right: -100%;
+              }
+              50%,
+              100% {
+                right: 100%;
+              }
+            }
+            &:nth-child(4) {
+              bottom: -100%;
+              left: 0;
+              width: 0.3rem;
+              height: 100%;
+              background: linear-gradient(360deg, transparent, #c2f23c);
+              animation: animate4 1s linear infinite;
+              animation-delay: 0.75s;
+            }
+            @keyframes animate4 {
+              0% {
+                bottom: -100%;
+              }
+              50%,
+              100% {
+                bottom: 100%;
+              }
+            }
+          }
+        }
+      }
+      &.active {
+        border-radius: 1rem;
+        outline: 0.25rem solid #c2f23c;
+        outline-offset: -0.25rem;
+      }
+      .blockContent {
+        display: flex;
+        flex-direction: column;
+        gap: 3.601rem;
+        align-items: center;
+        @media screen and (max-width: 1024px) {
+          gap: 1.875rem;
+        }
+        .imgContainer {
+          width: 18.75rem;
+          height: 12.5rem;
+          @media screen and (max-width: 1024px) {
+            width: 12rem;
+            height: 8rem;
+          }
+          @media screen and (max-width: 576px) {
+            width: 14.438rem;
+            height: 9.625rem;
+          }
+          .img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+        .blockDescription {
+          font-weight: 500;
+          font-size: 1.875rem;
+          @media screen and (max-width: 1024px) {
+            font-size: 1.375rem;
+            width: 99%;
+            margin: 0 auto;
+            text-align: center;
+          }
+          @media screen and (max-width: 576px) {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+  .contentContainer {
+    margin-top: 1.274rem;
+    display: grid;
+    grid-template-columns: 27.813rem 27.813rem 27.813rem;
+    justify-content: space-between;
+    row-gap: 1.313rem;
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: 21.2rem 21.2rem;
+      row-gap: 1.25rem;
+    }
+    @media screen and (max-width: 576px) {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .blockElem {
+      background-color: #fff;
+      color: #000;
+      width: 100%;
+      height: 10.188rem;
+      border-radius: 1rem;
+      box-sizing: border-box;
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.438rem;
+      @media screen and (max-width: 1024px) {
+        height: 10rem;
+        padding: 2.5rem 1.5rem;
+        gap: 0.75rem;
+      }
+      @media screen and (max-width: 576px) {
+        width: 100%;
+        padding: 0 1.5rem;
+        justify-content: center;
+      }
+      .title {
+        font-size: 1.5rem;
+        @media screen and (max-width: 1024px) {
+          font-size: 1.25rem;
+        }
+      }
+      .descript {
+        font-size: 1.25rem;
+        @media screen and (max-width: 1024px) {
+          font-size: 1.125em;
+        }
+      }
+    }
+  }
+}
