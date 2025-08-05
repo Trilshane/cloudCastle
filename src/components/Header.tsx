@@ -47,7 +47,7 @@ const Header = () => {
         }
       >
         <Link
-          onClick={() => setShowMobileMenu(false)}
+          onClick={() => showMobileMenu && setShowMobileMenu(false)}
           to="whatAwait"
           smooth={true}
           duration={500}
@@ -56,7 +56,7 @@ const Header = () => {
           Что ждёт
         </Link>
         <Link
-          onClick={() => setShowMobileMenu(false)}
+          onClick={() => showMobileMenu && setShowMobileMenu(false)}
           to="routeContent"
           smooth={true}
           duration={500}
@@ -65,7 +65,7 @@ const Header = () => {
           Маршрут
         </Link>
         <Link
-          onClick={() => setShowMobileMenu(false)}
+          onClick={() => showMobileMenu && setShowMobileMenu(false)}
           to="bingo"
           smooth={true}
           duration={500}
@@ -74,7 +74,7 @@ const Header = () => {
           Бинго
         </Link>
         <Link
-          onClick={() => setShowMobileMenu(false)}
+          onClick={() => showMobileMenu && setShowMobileMenu(false)}
           to="faq"
           smooth={true}
           duration={500}
