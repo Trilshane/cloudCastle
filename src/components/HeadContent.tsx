@@ -1,4 +1,4 @@
-import illustration from "../assets/images/illustration.png";
+import illustration from "../images/illustration.png";
 import styles from "../scss/headContent.module.scss";
 
 const HeadContent = () => {

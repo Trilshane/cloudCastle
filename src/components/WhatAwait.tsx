@@ -1,4 +1,4 @@
-import forestImg from "../assets/images/forest_img.jpg";
+import forestImg from "../images/forest_img.jpg";
 import styles from "../scss/whatAwait.module.scss";
 
 import { Element } from "react-scroll";

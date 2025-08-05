@@ -1,5 +1,5 @@
 import styles from "../scss/Faq.module.scss";
-import faqs from "../assets/JSONs/Faq.json";
+import faqs from "../JSONs/Faq.json";
 import AccordionFaqItem from "./smallSiteComponents/AccordionFaqItem";
 import { Element } from "react-scroll";
 

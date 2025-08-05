@@ -1,6 +1,6 @@
 import styles from "../scss/routeContent.module.scss";
-import blocks from "../assets/JSONs/blocks.json";
-import blocksContent from "../assets/JSONs/blocksContent.json";
+import blocks from "../JSONs/blocks.json";
+import blocksContent from "../JSONs/blocksContent.json";
 
 import { useState } from "react";
 import { Element } from "react-scroll";

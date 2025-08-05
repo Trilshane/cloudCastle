@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import logo from "../assets/images/logo.png";
+import logo from "../images/logo.png";
 import styles from "../scss/header.module.scss";
 import { Link } from "react-scroll";
 

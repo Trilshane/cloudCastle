@@ -1,5 +1,5 @@
 import styles from "../scss/bingo.module.scss";
-import bingoCards from "../assets/JSONs/bingoCards.json";
+import bingoCards from "../JSONs/bingoCards.json";
 import BingoItem from "./smallSiteComponents/BingoItem";
 import { Element } from "react-scroll";
 

@@ -1,5 +1,5 @@
 import styles from "../../scss/Faq.module.scss";
-import button from "../../assets/images/buttonIcon.png";
+import button from "../../images/buttonIcon.png";
 
 const AccordionButton = () => {
   return (
